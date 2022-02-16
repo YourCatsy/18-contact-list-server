@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <script src="./script.js" type="module" async></script>
+</head>
+
+<body>
+    <form id="contactForm">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Phone number</th>
+            </tr>
+
+            <tbody id="contactList"></tbody>
+            <tr>
+                <td><input class="title-input" id="nameInput" name="firstName" type="text"></td>
+                <td><input class="title-input" id="surnameInput" name="lastName" type="text"></td>
+                <td><input class="title-input" id="phoneInput" name="phone" type="text"></td>
+            </tr>
+        </table>
+        <button class="add-button">Add line</button>
+    </form>
+</body>
+
+<script id="contactItemTemplate" type="text/template">
+    <tr class = "contactItem {{done}}"
+        data-id="{{id}}"
+        data-status="{{status}}"
+        data-firstName="{{name}}"
+        data-lastName ='{{surname}}'
+        data-phone ='{{phone}}'
+        >
+        <td>{{name}}</td>
+          <td>{{surname}}</td>
+          <td>{{phone}}</td>
+          <td>
+            <button class="delete-button">Delete line</button>
+        </td>
+    </tr>
+    </script>
+
+</html>
